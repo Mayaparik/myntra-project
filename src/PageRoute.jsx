@@ -1,5 +1,5 @@
 import React from 'react'
-import {Routes, Route } from 'react-router-dom'
+import {BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SignUp from './components/auth/SignUp'
@@ -22,7 +22,8 @@ import BuyNow from './components/BuyNow'
 
 function PageRoute() {
   return (
-    <div>   
+    <div>
+      <BrowserRouter >
         <ScrollToTop />
         <Navbar />
         <Routes>
@@ -45,6 +46,7 @@ function PageRoute() {
             <Route path='/product-escuela/:listId' element={<ProductDetailsTwo />}/>
         </Routes>
         <Footer />
+      </BrowserRouter>   
     </div>
   )
 }

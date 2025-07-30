@@ -12,7 +12,7 @@ import { SearchProvider } from './context/SearchContext.jsx';
 
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter >
+  // <BrowserRouter >
     <SearchProvider>
       <WishlistProvider >
         <CartProvider >
@@ -24,5 +24,5 @@ createRoot(document.getElementById('root')).render(
         </CartProvider>
       </WishlistProvider>
     </SearchProvider>
-  </BrowserRouter>
+  // </BrowserRouter>
 )
