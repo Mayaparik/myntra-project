@@ -11,7 +11,6 @@ const { mobileContext, setMobileContext } = useContext(MobileViewContext)
     let filterData = {}
 
     for (let key in mobileContext) {
-      console.log(mobileContext[key])
       if (key === title) {
         filterData[key] = !mobileContext[key]
       } else {
