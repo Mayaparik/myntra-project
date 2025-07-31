@@ -27,7 +27,7 @@ function ProductTwoSlider() {
     return (
         <div className='space-y-16'>
             <h1 className='font-bold tracking-tight lg:text-4xl md:text-3xl text-2xl text-center'>SHOP BY CATEGORY</h1>
-            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  lg:grid-cols-6 gap-4 md:px-12 px-5'>
+            <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  lg:grid-cols-5   gap-4 md:px-12 px-5'>
                 {
                     filterProducts.map((list, index) => {
                         return (

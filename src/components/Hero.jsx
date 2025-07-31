@@ -24,7 +24,7 @@ function Hero() {
 
   return (
     <div>
-      <div className='w-full h-[400px] md:h-[600px] lg:h-[800px] relative overflow-hidden pt-16'>
+      <div className='w-full h-[400px] md:h-[500px] lg:h-[800px] relative overflow-hidden lg:pt-16 pt-33'>
 
         {
           banners.map((image, index) => (

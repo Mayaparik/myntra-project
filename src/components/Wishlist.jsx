@@ -8,19 +8,18 @@ function Wishlist() {
   const { wishlist, removeFromWishlist } = useWishlist()
 
   return (
-    <div >
-      <h1 className='text-2xl font-bold mb-6'>Wishlist</h1>
+    <div className='lg:pt-10 pt-25 bg-white'>
       {
         wishlist.length === 0 ? (
-          <div className='lg:px-12 px-5 py-12 bg-pink-600/80 h-screen my-auto '>
-            <div className='bg-white max-w-xs rounded-lg m-auto h-90 text-center flex flex-col '>
-                 <img src={wishlistImage} alt="" className='w-full ' />
-               <Link to='/' className='w-50 bg-pink-500/90 text-white mx-auto py-2 hover:bg-pink-600   '>START SHOPPING</Link>
+            <div className='max-w-sm rounded-lg m-auto text-center flex flex-col pt-10 space-y-2'>
+                 <img src={wishlistImage} alt="" className='md:w-70 w-40 mx-auto' />
+                 <p className='font-bold text-xl'>Your wishlist is empty</p>
+                 <p className='text-sm'>Create your first wishlist request</p>
+               <Link to='/' className='w-50 tracking-wider text-white font-semibold mx-auto py-2 bg-pink-600/80 '>+ Create New Wish</Link>
             </div>
-          </div>
           
         ) : (
-          <div className='grid grid-cols-2 md:grid-cols-5 gap-4 lg:px-12 px-5 py-12 '>
+          <div className='grid grid-cols-2 md:grid-cols-5 sm:grid-cols-3 gap-4 lg:px-12 px-5 py-12 '>
             {
               wishlist.map((product) => (
                 <div key={product.id} className="hover:bg-white hover:shadow-md relative">
