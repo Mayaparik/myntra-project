@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import myntraLogo from '../assets/myntraLogo.png'
 import { Link } from 'react-router-dom'
 import Men from '../dropdown/Men'
@@ -15,12 +15,29 @@ import WomenMobile from '../MobileComponent/WomenMobile'
 import HomeMobile from '../MobileComponent/HomeMobile'
 import BeautyMobile from '../MobileComponent/BeautyMobile'
 import KidsMobile from '../MobileComponent/KidsMobile'
+import ProfileMobile from '../MobileComponent/ProfileMobile'
 
 
 function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false)
     const { searchTerm, setSearchTerm } = useSearch()
+    const sidebarRef = useRef(null)
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+                setIsOpen(false)
+            }
+        }
+        if (isOpen) {
+            document.addEventListener('mousedown', handleClickOutside)
+        }
+
+        return () => {
+            document.addEventListener('mousedown', handleClickOutside)
+        }
+    }, [isOpen])
 
     return (
         <>
@@ -123,10 +140,7 @@ function Navbar() {
                 <div>
                     {
                         isOpen && (
-                            <div className={`fixed left-0 w-60 top-13 lg:hidden space-y-2 z-10 px-3 bg-white text-left overflow-scroll h-full `} style={{ scrollbarWidth: "none" }}>
-                                <div className="flex flex-col text-center lg:text-sm text-xs space-y-1  items-center">
-                                    {/* <Profile /> */}
-                                </div>
+                            <div ref={sidebarRef} className={`fixed left-0 w-60 top-14 lg:hidden space-y-2 z-10 px-3 bg-white text-left overflow-scroll h-full `} style={{ scrollbarWidth: "none" }}>
                                 <nav >
                                     <div className="flex flex-col lg:text-sm  py-3 text-sm  font-semibold  text-black">
                                         <MenMobile />
@@ -136,7 +150,8 @@ function Navbar() {
                                         <BeautyMobile />
                                     </div>
                                     <hr className='text-gray-300' />
-                                    <div className='flex flex-col text-sm text-gray-500 space-y-5  pt-4 '>
+                                    <div className='flex flex-col text-sm text-gray-500 space-y-5  pt-4 px-2'>
+                                        <ProfileMobile />
                                         <Link className='hover:text-black hover:font-bold'>Myntra Studio</Link>
                                         <Link className='hover:text-black hover:font-bold'>Myntra Mall</Link>
                                         <Link className='hover:text-black hover:font-bold'>Myntra Insider</Link>
@@ -151,6 +166,7 @@ function Navbar() {
                     }
                 </div>
             </header>
+
         </>
     )
 }

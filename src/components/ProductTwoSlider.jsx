@@ -33,13 +33,13 @@ function ProductTwoSlider() {
                         return (
                             list.images[0] !== "https://placehold.co/600x400" &&
 
-                            <div key={list.id} className=' text-center  text-black'>
+                            <div key={list.id} className='bg-pink-600/80 p-2 text-center text-black'>
                                 <Link to={`/product-escuela/${list.id}`}>
-                                    <img src={list.images?.[0]} alt="" className=" w-full" />
-                                    <div className='bg-rose-200 text-rose-800 px-3 py-1'>
-                                        <p className="text-sm font-semibold line-clamp-1 ">{list.category.name}</p>
+                                    <img src={list.images?.[0]} alt="" className=" rounded-t-sm" />
+                                    <div className=' text-white py-1 rounded-b-sm'>
+                                        {/* <p className="text-sm font-semibold line-clamp-1 ">{list.category.name}</p> */}
                                         <p className="text-sm font-semibold line-clamp-1 ">{list.title}</p>
-                                        <h1 className="  font-bold"> UNDER ${String(list.price).length > 2 ? String(list.price).substring(0, 2) : String(list.price)}</h1>
+                                        <h1 className="text-sm font-bold"> UNDER ${String(list.price).length > 2 ? String(list.price).substring(0, 2) : String(list.price)}</h1>
                                         <p className='text-sm font-semibold'>Shop Now</p>
                                     </div>
                                 </Link>

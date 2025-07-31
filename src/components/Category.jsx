@@ -113,7 +113,7 @@ function Category() {
 
 
     return (
-        <div className="px-5 md:px-12 space-y-6 pt-20">
+        <div className="px-5 md:px-12 space-y-6  lg:pt-25 pt-35">
             <section>
                 {renderProducts(women, "Women Dresses")}
             </section>

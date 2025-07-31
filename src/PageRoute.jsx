@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import SignUp from './components/auth/SignUp'
@@ -26,27 +26,27 @@ function PageRoute() {
       <BrowserRouter >
         <ScrollToTop />
         <Navbar />
-        <Routes>
+          <Routes>
             <Route path='/' element={
               <>
-              <Hero />
-              <ProductOneSlider />
-              <ProductTwoSlider />
-              <Mobiles />
+                <Hero />
+                <ProductOneSlider />
+                <ProductTwoSlider />
+                <Mobiles />
               </>
-              }/>
-            <Route path='/signup' element={<SignUp />}/>
-            <Route path='/termsofuse' element={<Terms />}/>
+            } />
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/termsofuse' element={<Terms />} />
             <Route path='/privacypolicy' element={<Policy />} />
-            <Route path='/category' element={<Category />}/>
-            <Route path='/wishlist' element={<Wishlist />}/>
+            <Route path='/category' element={<Category />} />
+            <Route path='/wishlist' element={<Wishlist />} />
             <Route path='/cart' element={<Cart />} />
             <Route path='/buy-now' element={<BuyNow />} />
-            <Route path='/product-dummy/:productId' element={<ProductDetails />}/>
-            <Route path='/product-escuela/:listId' element={<ProductDetailsTwo />}/>
-        </Routes>
+            <Route path='/product-dummy/:productId' element={<ProductDetails />} />
+            <Route path='/product-escuela/:listId' element={<ProductDetailsTwo />} />
+          </Routes>
         <Footer />
-      </BrowserRouter>   
+      </BrowserRouter>
     </div>
   )
 }

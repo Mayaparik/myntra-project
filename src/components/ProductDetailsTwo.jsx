@@ -18,15 +18,15 @@ function ProductDetailsTwo() {
 
 
     if (!product) {
-        return <div className="pt-20 px-5 "> <div className="flex justify-center items-center">
+        return <div className="lg:pt-25 pt-35 px-5 "> <div className="flex justify-center items-center">
             <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-pink-600/80"></div>
         </div></div>;
     }
 
 
     return (
-        <div className="lg:px-12 px-5 pt-20 space-y-5">
-            <h1 className="text-2xl font-bold">{product.title}</h1>
+        <div className="lg:px-12 px-5 lg:pt-25 pt-35 space-y-5">
+            <h1 className="md:text-2xl text-lg font-bold">{product.title}</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className='grid sm:grid-cols-2 h-fit gap-3 mx-auto'>
                     {/* Product images */}

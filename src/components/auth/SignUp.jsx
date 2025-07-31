@@ -30,7 +30,7 @@ function SignUp() {
 
 
     return (
-        <div className='bg-pink-100 h-fit py-30 px-5'>
+        <div className='bg-pink-100 h-screen lg:pt-25 pt-35  px-5'>
             <form onSubmit={handleSubmit} className='mx-auto  rounded-md bg-white max-w-md  px-8 py-15 space-y-6'>
                 <h1><span className='text-xl font-bold text-gray-600'>Login</span>or <span className='text-xl font-bold text-gray-600'>Signup</span></h1>
                 <div className="relative w-full">

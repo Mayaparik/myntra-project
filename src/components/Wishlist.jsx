@@ -11,7 +11,7 @@ function Wishlist() {
     <div className='lg:pt-10 pt-25 bg-white'>
       {
         wishlist.length === 0 ? (
-            <div className='max-w-sm rounded-lg m-auto text-center flex flex-col pt-10 space-y-2'>
+            <div className='max-w-sm rounded-lg m-auto text-center flex flex-col  space-y-2'>
                  <img src={wishlistImage} alt="" className='md:w-70 w-40 mx-auto' />
                  <p className='font-bold text-xl'>Your wishlist is empty</p>
                  <p className='text-sm'>Create your first wishlist request</p>
