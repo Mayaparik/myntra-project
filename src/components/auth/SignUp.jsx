@@ -24,6 +24,7 @@ function SignUp() {
 
         navigate("/")
     }
+    
 
 
     const isFormValid = mobile.length === 10 && agreed;

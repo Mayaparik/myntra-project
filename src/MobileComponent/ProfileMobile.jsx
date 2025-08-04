@@ -1,11 +1,20 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function ProfileMobile() {
 
     const [isOpen, setIsOpen] = useState(false)
-
+    const navigate = useNavigate()
     const toggleProfile = () => setIsOpen(!isOpen)
+
+    // logout button
+
+    function handleLogout() {
+        localStorage.removeItem("usermobile")
+        navigate('/')
+        window.location.reload()
+
+    }
 
     return (
         <>
@@ -15,16 +24,26 @@ function ProfileMobile() {
             </div>
             {
                 isOpen && (
-                    <div className='transition-all duration-600 overflow-scroll' style={{scrollbarWidth: "none"}}>
+                    <div className='transition-all duration-600 overflow-scroll' style={{ scrollbarWidth: "none" }}>
                         <div className='bg-white text-left text-sm space-y-3'>
-                            <div className=''>
-                                <p className='font-bold'>Welcome</p>
-                                <p className='text-gray-600 text-xs'>To access account and manage orders</p>
-                                <button className={`px-3 py-2 border my-2 font-bold rounded-xs bg-pink-600/80 text-white`}><Link to='/signup'>LOGIN/SIGNUP</Link></button>
+                            <div className='space-y-4'>
+                                <div>
+                                    <p className='font-bold'>Welcome</p>
+                                    <p className='text-gray-600 text-xs'>To access account and manage orders</p>
+                                </div>
+                                <div>
+                                    {
+                                        localStorage.getItem("usermobile") ? (
+                                            <button className={`px-3 py-2 border  font-bold rounded-xs bg-pink-600/80 text-white`} onClick={handleLogout}>
+                                                Logout </button>
+                                        ) : (
+                                            <Link to="/signup" className='px-3 py-2 border  font-bold rounded-xs bg-pink-600/80 text-white'>SignUp</Link>
+                                        )
+                                    }
+                                </div>
                             </div>
                             <hr className='text-gray-300' />
-                            
-                            </div>
+                        </div>
                     </div>
                 )
             }

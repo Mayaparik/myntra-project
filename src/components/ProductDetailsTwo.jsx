@@ -18,9 +18,10 @@ function ProductDetailsTwo() {
 
 
     if (!product) {
-        return <div className="lg:pt-25 pt-35 px-5 "> <div className="flex justify-center items-center">
-            <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-pink-600/80"></div>
-        </div></div>;
+        return <div className="lg:pt-25 pt-35 px-5 ">
+            <div className="flex justify-center items-center">
+                <div className="w-12 h-12 border-4 border-dashed rounded-full animate-spin border-pink-600/80"></div>
+            </div></div>;
     }
 
 
@@ -41,7 +42,7 @@ function ProductDetailsTwo() {
                             <p className="text-slate-500 font-normal text-xl">{product.title}</p>
                         </div>
                         <hr className='text-gray-300' />
-                        <p className=" font-bold text-xl">${String(product.price).length > 2 ? String(product.price).substring(0,2) : String(product.price)}</p>
+                        <p className=" font-bold text-xl">${String(product.price).length > 2 ? String(product.price).substring(0, 2) : String(product.price)}</p>
                         <p className='font-semibold text-emerald-700'>inclusive of all taxes</p>
                         <p className='text-sm font-semibold'>{product.description}</p>
                         <hr className='text-gray-300' />
