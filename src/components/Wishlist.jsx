@@ -11,11 +11,11 @@ function Wishlist() {
     <div className='lg:pt-10 pt-25 bg-white'>
       {
         wishlist.length === 0 ? (
-            <div className='max-w-sm rounded-lg m-auto text-center flex flex-col pt-10  space-y-2'>
+            <div className='max-w-sm rounded-lg m-auto text-center flex flex-col pt-10 space-y-2'>
                  <img src={wishlistImage} alt="" className='md:w-70 w-40 mx-auto' />
                  <p className='font-bold text-xl'>Your wishlist is empty</p>
                  <p className='text-sm'>Create your first wishlist request</p>
-               <Link to='/' className='w-50 tracking-wider text-white font-semibold mx-auto py-2 bg-pink-600/80 '>+ Create New Wish</Link>
+               <Link to='/' className='w-50 tracking-wider text-white font-semibold mx-auto py-2 bg-pink-600/80'>+ Create New Wish</Link>
             </div>
           
         ) : (

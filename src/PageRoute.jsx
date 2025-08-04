@@ -16,7 +16,8 @@ import ProductDetails from './components/ProductDetails'
 import ProductDetailsTwo from './components/ProductDetailsTwo'
 import ScrollToTop from './components/ScrollToTop'
 import BuyNow from './components/BuyNow'
-
+import Home from './components/Home'
+import PagenotFound from './components/PagenotFound'
 
 
 
@@ -27,14 +28,7 @@ function PageRoute() {
         <ScrollToTop />
         <Navbar />
           <Routes>
-            <Route path='/' element={
-              <>
-                <Hero />
-                <ProductOneSlider />
-                <ProductTwoSlider />
-                <Mobiles />
-              </>
-            } />
+            <Route path='/' element={<Home />} />
             <Route path='/signup' element={<SignUp />} />
             <Route path='/termsofuse' element={<Terms />} />
             <Route path='/privacypolicy' element={<Policy />} />
@@ -44,6 +38,8 @@ function PageRoute() {
             <Route path='/buy-now' element={<BuyNow />} />
             <Route path='/product-dummy/:productId' element={<ProductDetails />} />
             <Route path='/product-escuela/:listId' element={<ProductDetailsTwo />} />
+
+            <Route path='*' element={<PagenotFound />} />
           </Routes>
         <Footer />
       </BrowserRouter>
