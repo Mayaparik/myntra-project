@@ -12,7 +12,7 @@ function MenMobile() {
         <div>
             <div className={`flex justify-between items-center px-2 ${isOpen ? "bg-pink-600/80" : "bg-white"}`} onClick={toggleDropdown}>
                 <button className='py-2'>Men</button>
-                <p><i class="bi bi-chevron-down"></i></p>
+                <p><i className="bi bi-chevron-down"></i></p>
             </div>
             {
                 isOpen && (

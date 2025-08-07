@@ -37,7 +37,7 @@ function Hero() {
             banners.map((dt, index) => (
               <button key={index}
                 onClick={() => handleDot(index)}
-                className={`w-2 h-2 rounded-full ${current === index ? "bg-gray-800 scale-130" : "bg-gray-400"}`}></button>
+                className={`w-2 h-2 rounded-full cursor-pointer ${current === index ? "bg-gray-800 scale-130" : "bg-gray-400"}`}></button>
             ))
           }
         </div>

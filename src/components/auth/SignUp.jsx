@@ -54,7 +54,7 @@ function SignUp() {
                         checked={agreed}
                         onChange={(e) => setAgreed(e.target.checked)}
                     />
-                    <p className='font-semibold'>By continuing, i agree to the <Link to='/termsofuse' className='text-pink-500 '>Terms of Use</Link> & <Link to='privacypolicy' className='text-pink-500 '>Privacy Policy</Link>and i am above 18 years old.</p>
+                    <p className='font-semibold'>By continuing, i agree to the <Link to='/termsofuse' className='text-pink-500 '>Terms of Use</Link> & <Link to='/privacypolicy' className='text-pink-500 '>Privacy Policy</Link>and i am above 18 years old.</p>
                 </div>
                 <button type='submit'
                     disabled={!isFormValid}
